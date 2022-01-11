@@ -109,7 +109,9 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
     const gatherInfoResults = "";
 
 
-    for (var i = 0; )
+    for (var completelyRandomPassword = 0; completelyRandomPassword < PasswordLength; completelyRandomPassword++ ) {
+      generatePassword += PasswordLength[Math.floor(Math.random() * PasswordLength.length)];
+    }
 
   
 // Variables calling functions
