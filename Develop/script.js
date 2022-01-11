@@ -14,11 +14,11 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
 
 
 
-  // 1. create prompts. 
-  //  a. Password length has min of 8 and max of 128
 
+  
+// FUNCTION THAT GETS PASSWORD LENGTH
 
-  // WORKING CODE
+  
   function getPasswordLength () {
     var PasswordLength = 0;
     while (PasswordLength < passwordLeast || PasswordLength > passwordMost) {
@@ -31,19 +31,22 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
     }
     return PasswordLength
   }
-// WORKING CODE
 
 
-  //  b. use numbers, lowercase, uppercase, or special characters options
+// FUNCTION THAT GATHERS THE USERS RESPONSES AND SENDS THE INFO TO THE GENERATE PASSWORD FUNCTION.
+  
 
   function gatherInfo () {
+
+    // FUNCTION DOES NOT WORK IF YOU PUT IF FUNCTIONS IN BETWEEN VARIABLES 
+
     var askSymbols = confirm("Select if you want to have symbols in your generated password");
     var askNumbers = confirm("Select if you want to have numbers in your generated password");
     var askLowercase = confirm("Select if you want to have lowercase letters in your generated password");
     var askUppercase = confirm("Select if you want to have uppercase letters in your generated password");
     var blank = "";
 
-    // PROCESS OF GENERATING PASSWORD
+    // PROCESS OF GATHERING INFO / RESPONSES
 
     // ASKING FOR SYMBOLS IN PASSWORD
 
@@ -85,6 +88,8 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
      window.alert("Removing uppercase letters...");
    }
 
+  //  RESPONSE IF YOU SELECTED ALL YES OR ALL NO
+
    if (!askSymbols && !askNumbers && !askLowercase && !askUppercase) {
       alert("You are trying to generate a password, so why did you hit no for all of the questions? Let's try this again...");
       return gatherInfo ();
@@ -95,9 +100,6 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
    generatePassword();
   }
 
-  // 2. validate the input.
-
-
 
   // 3. generate password
   function generatePassword() {
@@ -107,6 +109,9 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
     const gatherInfoResults = "";
 
 
+    for (var i = 0; )
+
+  
 // Variables calling functions
  PasswordLength = getPasswordLength ();
  gatherInfoResults = gatherInfo ();
