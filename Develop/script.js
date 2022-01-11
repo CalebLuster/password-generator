@@ -110,7 +110,7 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
 
 
     for (var completelyRandomPassword = 0; completelyRandomPassword < PasswordLength; completelyRandomPassword++ ) {
-      generatePassword += PasswordLength[Math.floor(Math.random() * PasswordLength.length)];
+      password += gatherInfo[Math.floor(Math.random() * gatherInfoResults.length)];
     }
 
   
