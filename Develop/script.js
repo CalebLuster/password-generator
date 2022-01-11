@@ -1,5 +1,5 @@
 // Assignment code here
-var generateBtn = document.querySelector("#generate");
+
 
 
 var passwordMost = 128;
@@ -12,6 +12,8 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
 
 
 
+
+var generateBtn = document.querySelector("#generate");
 
 
 
@@ -29,7 +31,7 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
           alert("It is clearly stated in the before prompt that the minimum amount is " + (passwordLeast) + ' characters. This time, select something within this range PLEASE.')
       } 
     }
-    return PasswordLength
+    return PasswordLength;
   }
 
 
@@ -50,9 +52,11 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
 
     // ASKING FOR SYMBOLS IN PASSWORD
 
+
+
     if (askSymbols) {
-      blank =+ symbols
-      window.alert("Adding symbols to your generated password... This may take as long as it takes for you to click the button (this isn't a real loading screen)");
+      blank += symbols
+      window.alert("Adding symbols...");
     }
     else {
         window.alert("Removing symbols...");
@@ -61,8 +65,8 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
     // ASKING FOR NUMBERS IN PASSWORD
 
     if (askNumbers) {
-      blank =+ numbers
-      window.alert("Adding numbers to your generated password... This may take as long as it takes for you to click the button (this isn't a real loading screen)");
+      blank += numbers
+      window.alert("Adding numbers...");
     }
     else {
        window.alert("Removing numbers...");
@@ -71,8 +75,8 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
     // ASKING FOR LOWERCASE LETTERS IN PASSWORD
 
    if (askLowercase) {
-     blank =+ lowerCase
-     window.alert("Adding lowercase letters to your generated password... This may take as long as it takes for you to click the button (this isn't a real loading screen)");
+     blank += lowerCase
+     window.alert("Adding lowercase letters...");
     }
     else {
         window.alert("Removing lowercase letters...");
@@ -81,8 +85,8 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
     // ASKING FOR UPPERCASE LETTERS IN PASSWORD
 
    if (askUppercase) {
-     blank =+ upperCase
-     window.alert("Adding uppercase letters to your generated password... This may take as long as it takes for you to click the button (this isn't a real loading screen)");
+     blank += upperCase
+     window.alert("Adding uppercase letters...");
    }
    else {
      window.alert("Removing uppercase letters...");
@@ -91,36 +95,39 @@ var symbols = "`~!@#$%^&*()_+=-,<.>/?';:[{]}|";
   //  RESPONSE IF YOU SELECTED ALL YES OR ALL NO
 
    if (!askSymbols && !askNumbers && !askLowercase && !askUppercase) {
-      alert("You are trying to generate a password, so why did you hit no for all of the questions? Let's try this again...");
-      return gatherInfo ();
+    alert("You are trying to generate a password, so why did you hit no for all of the questions? Let's try this again...");
+    return gatherInfo ();
    }
    else if (askSymbols && askNumbers && askLowercase && askUppercase) {
-      window.alert("Wow, All variables were selected! I will generate a password much like you... EXTRA")
+    window.alert("Wow, All variables were selected! I will generate a password much like you... EXTRA")
    }
-   generatePassword();
+
+   return blank;
   }
 
 
   // 3. generate password
   function generatePassword() {
 
-    const PasswordLength;
-    const password = "";
-    const gatherInfoResults = "";
+    let PasswordLength;
+    let password = "";
+    let gatherInfoResults = "";
+
+    PasswordLength = getPasswordLength ();
+    gatherInfoResults = gatherInfo ();
 
 
     for (var completelyRandomPassword = 0; completelyRandomPassword < PasswordLength; completelyRandomPassword++ ) {
-      password += gatherInfo[Math.floor(Math.random() * gatherInfoResults.length)];
+      password += gatherInfoResults[Math.floor(Math.random() * gatherInfoResults.length)];
     }
 
   
 // Variables calling functions
- PasswordLength = getPasswordLength ();
- gatherInfoResults = gatherInfo ();
+
   
 
   // 4. display password back to user.
-  return password
+  return password;
 }
 
 
