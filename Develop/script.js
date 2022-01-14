@@ -112,7 +112,6 @@ var generateBtn = document.querySelector("#generate");
     let PasswordLength;
     let password = "";
     let gatherInfoResults = "";
-
     PasswordLength = getPasswordLength ();
     gatherInfoResults = gatherInfo ();
 

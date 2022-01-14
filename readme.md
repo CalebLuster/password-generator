@@ -1,22 +1,13 @@
 # Password Generator Starter Code
 
+Welcome to my sassy password generator! Where generating a completely random password is not only easy, but also fun!
 
-   window.prompt("How long is your password? (Select a number between 8 - 128.)")
+Have you ever clearly disobeyed instructions given to you just to see what would happen? Well, the sassy password generator will have none of that! The sassy password generator will ask you a series of prompts about adding symbols, numbers, and lower and uppercase letters. If you provide an answer not within the guidelines given to you, the sassy password generator will give you a sassy remark!
 
-   window.prompt("Do you want lowercase letters in your password?")
+Go ahead and explore it a little bit by purposly going against the prompts!
 
-   window.prompt("Do you want numbers in your password?")
+Here is a link to my password generator: https://calebluster.github.io/sassy-password-generator/
 
-   window.prompt("Do you want symbols in your password?")
+Here is a screenshot of the page!
 
-
-
-
-
-return symbols[Math.floor(Math.random() * symbols.length)];
-
-return numbers[Math.floor(Math.random() * numbers.length)];
-
-return upperCase[Math.floor(Math.random() * upperCase.length)];
-
-return lowerCase[Math.floor(Math.random() * lowerCase.length)];
+![Screenshot 22](<images/Screenshot%20(25).png>)
